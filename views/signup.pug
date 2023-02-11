@@ -1,0 +1,25 @@
+extends base
+
+
+block content
+        main.main 
+            .login-form 
+                h2.heading-secondary.ma-bt-sgn Sign Up 
+                form.form.form--signup
+                        .form__group 
+                            label.form__label(for="firstname") First name 
+                            input.form__input(type="text" id='firstname' name='first_name' placeholder='First name') 
+                        .form__group 
+                            label.form__label(for="lastname") Last name 
+                            input.form__input(type="text" id='lastname' name='last_name' placeholder='Last name') 
+                        .form__group 
+                            label.form__label(for="email") Email 
+                            input.form__input(type="email" id='email' name='email' placeholder='you@example.com') 
+                        .form__group 
+                            label.form__label(for="password") Password 
+                            input.form__input(type="password" id='password' name='password' placeholder='Password') 
+                        .form__group 
+                            label.form__label(for="confirm_password") Password 
+                            input.form__input(type="password" id='confirm_password' name='confirm_password' placeholder='Confirm Password') 
+                        .form__group 
+                            button.btn.btn--green Sign Up

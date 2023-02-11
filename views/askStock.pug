@@ -1,0 +1,28 @@
+extends base
+
+
+block content 
+    main.main 
+        p Ask Stock 
+        form.form__ask--Stock
+             .form__ask--Price 
+                 label(for="price") Price 
+                 input#price--lessThan.price__less--than(type="number",required ,name="price__less--than",placeholder="less than")
+                 input#price--greaterThan.price__greater--than(type="number",required ,name="price__greater--than",placeholder="greater than") 
+
+             .form__ask--priceChange 
+                 label(for="priceChange",title="difference between previous price and the premarket final price") Change 
+                 input#priceChange--lessThan.priceChange__less--than(type="number",name="priceChange__less--than",placeholder="Change less than")
+                 input#priceChange--greaterThan.priceChange__greater--than(type="number",name="priceChange__greater--than",placeholder="Change greater than") 
+
+             .form__ask--pricePerChange 
+                 label(for="pricePerChange",title="percentage change according to the previous price") Percent Change 
+                 input#pricePerChange--lessThan.pricePerChange__less--than(type="number",name="pricePerChange__less--than",placeholder="Percentage Change less than")
+                 input#pricePerChange--greaterThan.pricePerChange__greater--than(type="number",name="pricePerChange__greater--than",placeholder="Percentage Change greater than") 
+
+             .form__ask--quantity
+                 label(for="priceQuantity",title="Quantity is the number of share which is traded on premarket session") Quantity 
+                 input#quantity--lessThan.quantity__less--than(type="number",name="quantity__less--than",placeholder="Quantity traded less than")
+                 input#quantity--greaterThan.quantity__greater--than(type="number",name="quantity__greater--than",placeholder="Quantity greater than") 
+             .form__ask--button 
+                 button.asking_but Ask

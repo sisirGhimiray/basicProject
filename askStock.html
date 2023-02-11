@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Stock</title>
+</head>
+<body>
+    <main class="main">
+        <p>Ask Stock</p>
+        <form class="form__ask--Stock">
+            <!-- <div class="form__ask--Date">
+                <p>Date format is year-month-date 2023-01-02</p>
+                <label for="price">Date</label>
+                <input required type="text" name="date__less--than" id="date--lessThan" class="date__less--than" placeholder="Date less than" maxlength="10">
+                <input required type="text" name="date__greater--than" id="date--greaterThan" class="date__greater--than" placeholder="Date greater than">
+
+            </div> -->
+            <div class="form__ask--Price">
+                <label for="price">Price</label>
+                <input required type="number" name="price__less--than" id="price--lessThan" class="price__less--than" placeholder="less than">
+                <input required type="number" name="price__greater--than" id="price--greaterThan" class="price__greater--than" placeholder="greater than">
+
+            </div>
+            <div class="form__ask--priceChange">
+                <label for="priceChange" title="difference between previous price and the premarket final price">Change</label>
+                <input required type="number" name="priceChange__less--than" id="priceChange--lessThan" class="priceChange__less--than" placeholder="Change less than">
+                <input required type="number" name="priceChange__greater--than" id="priceChange--greaterThan" class="priceChange__greater--than" placeholder="Change greater than">
+
+            </div>
+            <div class="form__ask--pricePerChange">
+                <label for="pricePerChange" title="percentage change according to the previous price">Percent Change</label>
+                <input required type="number" name="pricePerChange__less--than" id="pricePerChange--lessThan" class="pricePerChange__less--than" placeholder="Percentage Change less than">
+                <input required type="number" name="pricePerChange__greater--than" id="pricePerChange--greaterThan" class="pricePerChange__greater--than" placeholder="Percentage Change greater than">
+            </div>
+
+            <div class="form__ask--quantity">
+                <label for="priceQuantity" title="Quantity is the number of share which is traded on premarket session">Quantity</label>
+                <input required type="number" name="quantity__less--than" id="quantity--lessThan" class="quantity__less--than" placeholder="Quantity traded less than">
+                <input required type="number" name="quantity__greater--than" id="quantity--greaterThan" class="quantity__greater--than" placeholder="Quantity greater than">
+            </div>
+            <div class="form__ask--button">
+                <button type="submit" class="asking_but">Ask</button>
+            </div>
+        </form>
+
+
+    </main>
+
+<script>
+
+
+let askStockForm=document.querySelector(".form__ask--Stock");
+let priceLT=document.querySelector(".price__less--than");
+let priceGT=document.querySelector(".price__greater--than");
+let priceChangeLT=document.querySelector(".priceChange__less--than");
+let priceChangeGT=document.querySelector(".priceChange__greater--than");
+let pricePerChangeLT=document.querySelector(".pricePerChange__less--than");
+let pricePerChangeGT=document.querySelector(".pricePerChange__greater--than");
+let quantityLT=document.querySelector(".quantity__less--than");
+let quantityGT=document.querySelector(".quantity__greater--than");
+
+let askButton=document.querySelector(".asking_but")
+
+
+if(askStockForm){
+
+    askStockForm.addEventListener("submit",function(e){
+    
+        e.preventDefault();
+    
+        let queryObj={
+            ltPrice:priceLT.value,
+            gtPrice:priceGT.value,
+            gtPriceChange:priceChangeGT.value,
+            ltPriceChange:priceChangeLT.value,
+            ltPerPriceChange:pricePerChangeLT.value,
+            gtPerPriceChange:pricePerChangeGT.value,
+            ltQuantity:quantityLT.value,
+            gtQuantitiy:quantityGT.value,
+        }
+        console.log(queryObj);
+    
+    
+    })
+
+
+
+}
+
+
+</script>
+
+</body>
+</html>
